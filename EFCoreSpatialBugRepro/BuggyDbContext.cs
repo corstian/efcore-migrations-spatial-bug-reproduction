@@ -8,7 +8,7 @@ namespace EFCoreSpatialBugRepro
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlServer("Data Source=.;Initial Catalog=EFCoreSpatialBugRepro;Integrated Security=True;", q => q.UseNetTopologySuite());
+            optionsBuilder.UseSqlServer("Data Source=(localdb)\\.;Initial Catalog=EFCoreSpatialBugRepro;Integrated Security=True;", q => q.UseNetTopologySuite());
             base.OnConfiguring(optionsBuilder);
         }
     }
